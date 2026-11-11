@@ -10,7 +10,7 @@
       * { box-sizing:border-box; } html { scroll-behavior:smooth; }
       body { margin:0; min-width:320px; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; line-height:1.5; }
       a,button { font:inherit; } .wrap { width:min(100% - 2rem,72rem); margin:auto; }
-      .announcement { padding:.8rem 1rem; background:var(--red); color:#fff; font-size:clamp(.82rem,2vw,.96rem); font-weight:700; letter-spacing:.02em; text-align:center; }
+      .announcement { position:sticky; top:0; z-index:10; padding:.8rem 1rem; background:var(--red); color:#fff; font-size:clamp(.82rem,2vw,.96rem); font-weight:700; letter-spacing:.02em; text-align:center; box-shadow:0 .2rem .7rem rgb(0 0 0 / 20%); }
       .announcement strong { color:#ffe295; text-transform:uppercase; }
       header { overflow:hidden; background:var(--deep-pine); color:#fff; }
       .nav { display:flex; align-items:center; justify-content:space-between; padding:1.2rem 0; }
@@ -46,11 +46,11 @@
     </style>
   </head>
   <body>
-    <div class="announcement"><strong>Price Rise Ahead!</strong> Secure your Thermomix TM7 now before rates go up on <strong>January 1st</strong>.</div>
+    <div class="announcement"><strong>Price Rise Ahead!</strong> Secure your Thermomix TM7 now before prices increase on <strong>January 1st</strong>.</div>
     <header>
-      <nav class="nav wrap" aria-label="Primary navigation"><a class="brand" href="#offers">TM7 NOVEMBER</a><a class="advisor-chip" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%27d%20like%20to%20know%20more%20about%20the%20TM7%20Christmas%20offers.">WhatsApp Wani ↗</a></nav>
+      <nav class="nav wrap" aria-label="Primary navigation"><a class="brand" href="#offers">TM7 NOVEMBER</a><a class="advisor-chip" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%20would%20like%20to%20book%20a%20Cooking%20Experience.">WhatsApp Wani ↗</a></nav>
       <div class="hero wrap">
-        <div><p class="eyebrow">Christmas promotion</p><h1>Give the gift that keeps on cooking.</h1><p class="lead">Choose a full-payment TM7 bundle with a free second bowl, or spread the cost with a 24-month, zero-interest option and no deposit.</p><div class="hero-actions"><a class="cta" href="#offers">Explore offers</a><a class="cta-secondary" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%27d%20like%20to%20know%20more%20about%20the%20TM7%20Christmas%20offers.">Chat to Wani on WhatsApp</a></div></div>
+        <div><p class="eyebrow">Christmas promotion</p><h1>Give the gift that keeps on cooking.</h1><p class="lead">Choose a full-payment TM7 bundle with a free second bowl, or spread the cost with a 24-month, zero-interest option and no deposit.</p><div class="hero-actions"><a class="cta" href="#offers">Explore offers</a><a class="cta-secondary" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%20would%20like%20to%20book%20a%20Cooking%20Experience.">Book Cooking Experience</a></div></div>
         <section class="carousel" aria-label="TM7 Christmas gallery" aria-roledescription="carousel">
           <article class="slide is-active" aria-label="Slide 1 of 4"><img src="assets/carousel-main.webp" alt="Thermomix TM7 beside a gift-wrapped second mixing bowl"><p class="slide-copy">A little extra magic this Christmas</p></article>
           <article class="slide" aria-label="Slide 2 of 4"><img src="assets/offer-1.webp" alt="Thermomix TM7 with a second mixing bowl in Christmas wrapping"><p class="slide-copy">TM7 + free second bowl when you pay in full</p></article>
@@ -64,13 +64,13 @@
     <main>
       <section class="wrap" id="offers"><div class="section-heading"><h2>Choose your Christmas offer</h2><p>Buy online now or book a free demo with Wani, your Thermomix Advisor.</p></div>
         <div class="offers" aria-label="TM7 purchase options">
-          <article class="offer offer--highlight"><img class="offer-image" src="assets/offer-1.webp" alt="TM7 with free second mixing bowl offer"><div class="offer-content"><p class="label">One full payment</p><h3>TM7 + Free Second Bowl</h3><p class="price">£1,349</p><p class="terms">Pay in full.</p><div class="spacer"></div><a class="cta" href="https://advisor.vorwerk.co.uk/r/1fc6c5f08aff">Get this offer</a></div></article>
-          <article class="offer"><img class="offer-image" src="assets/offer-2.webp" alt="TM7 with half-price second mixing bowl offer"><div class="offer-content"><p class="label">24-month instalment</p><h3>TM7 + 50% Off Second Bowl</h3><p class="price">£59.73/month</p><p class="terms">No deposit · 24 months · 0% interest</p><div class="spacer"></div><a class="cta" href="https://advisor.vorwerk.co.uk/r/64be71663773">Get this offer</a></div></article>
-          <article class="offer"><img class="offer-image" src="assets/offer-3.webp" alt="TM7 with interest-free finance offer"><div class="offer-content"><p class="label">24-month instalment</p><h3>TM7 Only</h3><p class="price">£56.21/month</p><p class="terms">No deposit · 24 months · 0% interest</p><div class="spacer"></div><a class="cta" href="https://advisor.vorwerk.co.uk/r/c3ed70fbd6a9">Get this offer</a></div></article>
+          <article class="offer offer--highlight"><img class="offer-image" src="assets/offer-1.webp" alt="TM7 with free second mixing bowl offer"><div class="offer-content"><p class="label">One full payment</p><h3>TM7 + Free Second Bowl</h3><p class="price">£1,349</p><p class="terms">Pay in full.</p><div class="spacer"></div><a class="cta" href="https://advisor.vorwerk.co.uk/r/1fc6c5f08aff" target="_blank" rel="noopener">Get this offer</a></div></article>
+          <article class="offer"><img class="offer-image" src="assets/offer-2.webp" alt="TM7 with half-price second mixing bowl offer"><div class="offer-content"><p class="label">24-month instalment</p><h3>TM7 + 50% Off Second Bowl</h3><p class="price">£59.73/month</p><p class="terms">No deposit · 24 months · 0% interest</p><div class="spacer"></div><a class="cta" href="https://advisor.vorwerk.co.uk/r/64be71663773" target="_blank" rel="noopener">Get this offer</a></div></article>
+          <article class="offer"><img class="offer-image" src="assets/offer-3.webp" alt="TM7 with interest-free finance offer"><div class="offer-content"><p class="label">24-month instalment</p><h3>TM7 Only</h3><p class="price">£56.21/month</p><p class="terms">No deposit · 24 months · 0% interest</p><div class="spacer"></div><a class="cta" href="https://advisor.vorwerk.co.uk/r/c3ed70fbd6a9" target="_blank" rel="noopener">Get this offer</a></div></article>
         </div>
         <aside class="notice">Christmas offers are limited. Please check the offer terms, availability, and your eligibility with Wani before completing a purchase.</aside>
       </section>
-      <section class="advisor wrap" aria-label="Contact Wani"><img class="advisor-profile" src="assets/wani-profile.jpeg" alt="Wani, Thermomix Advisor"><div><h2>Questions? I’m Wani.</h2><p>I can help you compare the offers and choose the option that works best for you.</p></div><a class="cta" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%27d%20like%20help%20choosing%20a%20TM7%20Christmas%20offer.">Message Wani on WhatsApp</a></section>
+      <section class="advisor wrap" aria-label="Contact Wani"><img class="advisor-profile" src="assets/wani-profile.jpeg" alt="Wani, Thermomix Advisor"><div><h2>Questions? I’m Wani.</h2><p>I can help you compare the offers and choose the option that works best for you.</p></div><a class="cta" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%20would%20like%20to%20book%20a%20Cooking%20Experience.">Message Wani on WhatsApp</a></section>
       <section class="opportunity wrap" aria-labelledby="earn-title"><div><p class="eyebrow">A different way to own TM7</p><h2 id="earn-title">Share the magic. Earn your TM7 for free.</h2><p>Would you love to share Thermomix with others? Talk to Wani about becoming an Independent Thermomix Advisor and explore whether the opportunity is right for you.</p><div class="opportunity-actions"><a class="cta" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%27d%20like%20to%20know%20more%20about%20becoming%20a%20Thermomix%20Advisor.">Ask Wani how</a></div></div></section>
     </main>
     <footer>TM7 Christmas offers · Your Thermomix advisor: Wani</footer>
