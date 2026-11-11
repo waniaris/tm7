@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore TM7 Christmas offers with Wani, your Thermomix advisor.">
+    <title>TM7 Christmas Offers | Wani</title>
+    <style>
+      :root { --ink:#182019; --muted:#667066; --paper:#f7f3ec; --white:#fff; --pine:#075b37; --deep-pine:#03391f; --red:#9d1423; --gold:#e7bb52; --line:#ddd9cf; }
+      * { box-sizing:border-box; } html { scroll-behavior:smooth; }
+      body { margin:0; min-width:320px; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; line-height:1.5; }
+      a,button { font:inherit; } .wrap { width:min(100% - 2rem,72rem); margin:auto; }
+      .announcement { padding:.8rem 1rem; background:var(--red); color:#fff; font-size:clamp(.82rem,2vw,.96rem); font-weight:700; letter-spacing:.02em; text-align:center; }
+      .announcement strong { color:#ffe295; text-transform:uppercase; }
+      header { overflow:hidden; background:var(--deep-pine); color:#fff; }
+      .nav { display:flex; align-items:center; justify-content:space-between; padding:1.2rem 0; }
+      .brand { color:#fff; font-size:1.04rem; font-weight:800; letter-spacing:.09em; text-decoration:none; }
+      .advisor-chip { display:inline-flex; gap:.45rem; align-items:center; padding:.55rem .85rem; border:1px solid rgb(255 255 255 / 40%); border-radius:999px; color:#fff; font-size:.9rem; font-weight:700; text-decoration:none; }
+      .hero { display:grid; grid-template-columns:minmax(0,.92fr) minmax(22rem,1.08fr); gap:3rem; align-items:center; padding:2.2rem 0 4.5rem; }
+      .eyebrow { margin:0 0:.9rem; color:#ffe295; font-size:.78rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+      h1 { max-width:12ch; margin:0 0:1.15rem; font-size:clamp(2.7rem,6vw,5.25rem); line-height:.97; letter-spacing:-.06em; }
+      .lead { max-width:34rem; margin:0; color:#e1eee4; font-size:1.12rem; }
+      .hero-actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.65rem; }
+      .cta,.cta-secondary { display:inline-flex; align-items:center; justify-content:center; min-height:3rem; padding:.75rem 1rem; border-radius:.6rem; font-weight:800; text-decoration:none; }
+      .cta { background:#fff; color:var(--deep-pine); } .cta:hover,.cta:focus-visible { background:#f8d985; outline:none; }
+      .cta-secondary { border:1px solid rgb(255 255 255 / 55%); color:#fff; } .cta-secondary:hover,.cta-secondary:focus-visible { border-color:#fff; background:rgb(255 255 255 / 12%); outline:none; }
+      .carousel { position:relative; min-height:27rem; overflow:hidden; border-radius:1.25rem; background:#173426; box-shadow:0 1.3rem 3rem rgb(0 0 0 / 25%); }
+      .slide { position:absolute; inset:0; opacity:0; pointer-events:none; transition:opacity .6s ease; } .slide.is-active { opacity:1; pointer-events:auto; }
+      .slide img { width:100%; height:100%; object-fit:cover; } .slide:first-child img { object-position:center; }
+      .slide-copy { position:absolute; right:1rem; bottom:1rem; left:1rem; margin:0; padding:.8rem .95rem; border-radius:.65rem; background:rgb(4 35 19 / 87%); color:#fff; font-size:.91rem; font-weight:700; }
+      .carousel-controls { position:absolute; top:1rem; right:1rem; display:flex; gap:.45rem; } .carousel-controls button { display:grid; width:2.3rem; height:2.3rem; place-items:center; border:0; border-radius:50%; background:rgb(255 255 255 / 91%); color:var(--ink); cursor:pointer; font-size:1.2rem; }
+      .carousel-controls button:hover,.carousel-controls button:focus-visible { background:#fff; outline:3px solid #ffe295; outline-offset:2px; }
+      .dots { position:absolute; right:1rem; bottom:1.35rem; display:flex; gap:.35rem; } .dot { width:.55rem; height:.55rem; padding:0; border:0; border-radius:50%; background:rgb(255 255 255 / 55%); cursor:pointer; } .dot[aria-current="true"] { width:1.45rem; border-radius:1rem; background:#fff; }
+      main { padding:4.5rem 0 0; } .section-heading { display:flex; gap:1rem; align-items:end; justify-content:space-between; margin-bottom:1.6rem; } .section-heading h2 { margin:0; font-size:clamp(1.8rem,3vw,2.45rem); letter-spacing:-.045em; } .section-heading p { max-width:29rem; margin:0; color:var(--muted); text-align:right; }
+      .offers { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; } .offer { display:flex; flex-direction:column; overflow:hidden; border:1px solid var(--line); border-radius:1rem; background:var(--white); box-shadow:0 .4rem 1.4rem rgb(24 32 25 / 5%); } .offer--highlight { border:2px solid var(--pine); }
+      .offer-image { width:100%; aspect-ratio:1 / 1; object-fit:cover; } .offer-content { display:flex; flex:1; flex-direction:column; padding:1.4rem; }
+      .label { margin:0 0:.7rem; color:var(--pine); font-size:.74rem; font-weight:800; letter-spacing:.09em; text-transform:uppercase; } .offer h3 { margin:0 0:1rem; font-size:1.42rem; line-height:1.16; letter-spacing:-.035em; } .price { margin:0 0:.35rem; font-size:2.05rem; font-weight:800; letter-spacing:-.05em; } .terms { margin:0; color:var(--muted); } .spacer { flex:1; }
+      .offer .cta { width:100%; margin-top:1.4rem; background:var(--pine); color:#fff; } .offer .cta:hover,.offer .cta:focus-visible { background:var(--deep-pine); }
+      .notice { margin-top:2rem; padding:1.1rem 1.2rem; border-left:4px solid var(--gold); border-radius:.25rem; background:#fff6dc; color:#5b4a1e; font-size:.94rem; }
+      .advisor { display:grid; grid-template-columns:auto 1fr auto; gap:1.5rem; align-items:center; margin-top:4rem; padding:1.5rem 2rem; border-radius:1rem; background:var(--pine); color:#fff; } .advisor-profile { width:5.75rem; height:5.75rem; border:3px solid #ffe295; border-radius:50%; object-fit:cover; object-position:center 32%; box-shadow:0 .35rem .9rem rgb(0 0 0 / 24%); } .advisor h2 { margin:0 0:.45rem; font-size:1.8rem; letter-spacing:-.04em; } .advisor p { max-width:40rem; margin:0; color:#e2f2e5; } .advisor .cta { white-space:nowrap; }
+      .opportunity { position:relative; width:min(100% - 2rem,54rem); overflow:hidden; margin:4rem auto 0; padding:2.4rem 2.6rem; border:2px solid var(--gold); border-radius:1rem; background:linear-gradient(135deg,#6e0b16 0%,#a61427 55%,#70101a 100%); color:#fff; box-shadow:0 1rem 2.5rem rgb(78 9 18 / 25%); } .opportunity::after { position:absolute; top:-6rem; right:-4rem; width:14rem; height:14rem; border:1.65rem solid rgb(255 226 149 / 18%); border-radius:50%; content:""; } .opportunity > * { position:relative; z-index:1; } .opportunity h2 { max-width:18ch; margin:0 0:.75rem; color:#fff; font-size:clamp(2.1rem,4.4vw,3.45rem); line-height:.97; letter-spacing:-.06em; } .opportunity p { max-width:42rem; margin:0; color:#fff2e7; } .opportunity .eyebrow { display:inline-block; padding:.4rem .65rem; border-radius:999px; background:#ffe295; color:#533d08!important; } .opportunity-actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.25rem; } .opportunity .cta { background:#ffe295; color:#5a1017; } .opportunity .cta:hover,.opportunity .cta:focus-visible { background:#fff; }
+      footer { padding:1.5rem 0 2.5rem; background:var(--deep-pine); color:#dfe8df; font-size:.84rem; text-align:center; }
+      @media (max-width:850px) { .hero { grid-template-columns:1fr; gap:2rem; padding-top:1.5rem; } .carousel { min-height:24rem; } .offers { grid-template-columns:1fr; } .offer { display:grid; grid-template-columns:minmax(10rem,.85fr) 1.15fr; } .offer-image { height:100%; aspect-ratio:auto; } .section-heading { display:block; } .section-heading p { margin-top:.65rem; text-align:left; } .opportunity { width:min(100% - 2rem,46rem); } }
+      @media (max-width:560px) { .wrap { width:min(100% - 1.25rem,72rem); } .nav { padding:1rem 0; } .advisor { grid-template-columns:auto 1fr; padding:1.5rem; } .advisor .cta { grid-column:1 / -1; width:100%; } .advisor-profile { width:4.5rem; height:4.5rem; } .carousel { min-height:20rem; } .offer { display:flex; } .offer-image { aspect-ratio:1 / 1; height:auto; } .opportunity { width:calc(100% - 1.25rem); margin-top:3rem; padding:1.65rem; } .opportunity::after { top:-7rem; right:-6rem; } .announcement { font-size:.78rem; } }
+      @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; } }
+    </style>
+  </head>
+  <body>
+    <div class="announcement"><strong>Price Rise Ahead!</strong> Secure your Thermomix TM7 now before rates go up on <strong>January 1st</strong>.</div>
+    <header>
+      <nav class="nav wrap" aria-label="Primary navigation"><a class="brand" href="#offers">TM7 NOVEMBER</a><a class="advisor-chip" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%27d%20like%20to%20know%20more%20about%20the%20TM7%20Christmas%20offers.">WhatsApp Wani ↗</a></nav>
+      <div class="hero wrap">
+        <div><p class="eyebrow">Christmas promotion</p><h1>Give the gift that keeps on cooking.</h1><p class="lead">Choose a full-payment TM7 bundle with a free second bowl, or spread the cost with a 24-month, zero-interest option and no deposit.</p><div class="hero-actions"><a class="cta" href="#offers">Explore offers</a><a class="cta-secondary" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%27d%20like%20to%20know%20more%20about%20the%20TM7%20Christmas%20offers.">Chat to Wani on WhatsApp</a></div></div>
+        <section class="carousel" aria-label="TM7 Christmas gallery" aria-roledescription="carousel">
+          <article class="slide is-active" aria-label="Slide 1 of 4"><img src="assets/carousel-main.webp" alt="Thermomix TM7 beside a gift-wrapped second mixing bowl"><p class="slide-copy">A little extra magic this Christmas</p></article>
+          <article class="slide" aria-label="Slide 2 of 4"><img src="assets/offer-1.webp" alt="Thermomix TM7 with a second mixing bowl in Christmas wrapping"><p class="slide-copy">TM7 + free second bowl when you pay in full</p></article>
+          <article class="slide" aria-label="Slide 3 of 4"><img src="assets/offer-2.webp" alt="Thermomix TM7 with a second mixing bowl and Christmas gifts"><p class="slide-copy">TM7 + 50% off a second bowl with 0% interest</p></article>
+          <article class="slide" aria-label="Slide 4 of 4"><img src="assets/offer-3.webp" alt="Thermomix TM7 at Christmas"><p class="slide-copy">TM7 with 24-month, 0% interest finance</p></article>
+          <div class="carousel-controls"><button type="button" data-direction="previous" aria-label="Previous image">←</button><button type="button" data-direction="next" aria-label="Next image">→</button></div>
+          <div class="dots" aria-label="Choose gallery image"><button class="dot" type="button" data-slide="0" aria-label="Show image 1" aria-current="true"></button><button class="dot" type="button" data-slide="1" aria-label="Show image 2" aria-current="false"></button><button class="dot" type="button" data-slide="2" aria-label="Show image 3" aria-current="false"></button><button class="dot" type="button" data-slide="3" aria-label="Show image 4" aria-current="false"></button></div>
+        </section>
+      </div>
+    </header>
+    <main>
+      <section class="wrap" id="offers"><div class="section-heading"><h2>Choose your Christmas offer</h2><p>Buy online now or book a free demo with Wani, your Thermomix Advisor.</p></div>
+        <div class="offers" aria-label="TM7 purchase options">
+          <article class="offer offer--highlight"><img class="offer-image" src="assets/offer-1.webp" alt="TM7 with free second mixing bowl offer"><div class="offer-content"><p class="label">One full payment</p><h3>TM7 + Free Second Bowl</h3><p class="price">£1,349</p><p class="terms">Pay in full.</p><div class="spacer"></div><a class="cta" href="https://advisor.vorwerk.co.uk/r/1fc6c5f08aff">Get this offer</a></div></article>
+          <article class="offer"><img class="offer-image" src="assets/offer-2.webp" alt="TM7 with half-price second mixing bowl offer"><div class="offer-content"><p class="label">24-month instalment</p><h3>TM7 + 50% Off Second Bowl</h3><p class="price">£59.73/month</p><p class="terms">No deposit · 24 months · 0% interest</p><div class="spacer"></div><a class="cta" href="https://advisor.vorwerk.co.uk/r/64be71663773">Get this offer</a></div></article>
+          <article class="offer"><img class="offer-image" src="assets/offer-3.webp" alt="TM7 with interest-free finance offer"><div class="offer-content"><p class="label">24-month instalment</p><h3>TM7 Only</h3><p class="price">£56.21/month</p><p class="terms">No deposit · 24 months · 0% interest</p><div class="spacer"></div><a class="cta" href="https://advisor.vorwerk.co.uk/r/c3ed70fbd6a9">Get this offer</a></div></article>
+        </div>
+        <aside class="notice">Christmas offers are limited. Please check the offer terms, availability, and your eligibility with Wani before completing a purchase.</aside>
+      </section>
+      <section class="advisor wrap" aria-label="Contact Wani"><img class="advisor-profile" src="assets/wani-profile.jpeg" alt="Wani, Thermomix Advisor"><div><h2>Questions? I’m Wani.</h2><p>I can help you compare the offers and choose the option that works best for you.</p></div><a class="cta" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%27d%20like%20help%20choosing%20a%20TM7%20Christmas%20offer.">Message Wani on WhatsApp</a></section>
+      <section class="opportunity wrap" aria-labelledby="earn-title"><div><p class="eyebrow">A different way to own TM7</p><h2 id="earn-title">Share the magic. Earn your TM7 for free.</h2><p>Would you love to share Thermomix with others? Talk to Wani about becoming an Independent Thermomix Advisor and explore whether the opportunity is right for you.</p><div class="opportunity-actions"><a class="cta" href="https://wa.me/447825597129?text=Hi%20Wani%2C%20I%27d%20like%20to%20know%20more%20about%20becoming%20a%20Thermomix%20Advisor.">Ask Wani how</a></div></div></section>
+    </main>
+    <footer>TM7 Christmas offers · Your Thermomix advisor: Wani</footer>
+    <script>
+      const slides = [...document.querySelectorAll('.slide')]; const dots = [...document.querySelectorAll('.dot')]; const carousel = document.querySelector('.carousel'); let activeSlide = 0; let timer;
+      function showSlide(index) { activeSlide = (index + slides.length) % slides.length; slides.forEach((slide, item) => slide.classList.toggle('is-active', item === activeSlide)); dots.forEach((dot, item) => dot.setAttribute('aria-current', String(item === activeSlide))); }
+      function startTimer() { window.clearInterval(timer); timer = window.setInterval(() => showSlide(activeSlide + 1), 5000); }
+      document.querySelectorAll('[data-direction]').forEach((button) => button.addEventListener('click', () => { showSlide(activeSlide + (button.dataset.direction === 'next' ? 1 : -1)); startTimer(); })); dots.forEach((dot, index) => dot.addEventListener('click', () => { showSlide(index); startTimer(); })); carousel.addEventListener('mouseenter', () => window.clearInterval(timer)); carousel.addEventListener('mouseleave', startTimer); if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) startTimer();
+    </script>
+  </body>
+</html>
